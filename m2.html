@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="C:/Users/k/Desktop/곰곰약/fav.png">
+
+    <meta property="og:title" content="알아두면 좋은 약 상식" />
+    <meta property="og:description" content="같이 한 번 알아봐요!" />
+    <meta property="og:image" content="C:/Users/k/Desktop/곰곰약/fav.png" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>약 상식</title>
+    <style>
+        body {
+            background-color: white;
+            background-image: url("C:/Users/k/Desktop/곰곰약/mm.png");
+            background-position: 700px 100px;
+            background-repeat: no-repeat;
+            background-size: 800px;
+        }
+
+        * {
+            font-family: 'Jua', sans-serif;
+        }
+
+        .gom {
+            display: block;
+            width: 200px;
+            height: 200px;
+            border: solid 3px rgb(22, 79, 122);
+            background-color: rgb(22, 79, 122);
+            border-radius: 200px;
+            box-shadow: 0px 0px 10px 0px rgb(22, 79, 122);
+            margin: 70px auto 40px auto;
+            background-size: cover;
+            background-position: center;
+            background-image: url("C:/Users/k/Desktop/곰곰약/m2.png");
+            text-align: center;
+            text-decoration: none;
+            line-height: 450px;
+            color: rgb(22, 79, 122);
+            font-size: 24px;
+        }
+
+        .title {
+            color: rgb(22, 79, 122);
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .msg {
+            color: rgb(22, 79, 122);
+            text-align: center;
+            font-size: 32px;
+            line-height: 48px;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .btn-back {
+            width: 150px;
+            height: 50px;
+
+            color: rgb(22, 79, 122);
+            border: 2px solid rgb(22, 79, 122);
+            background-color: white;
+
+            border-radius: 10px;
+
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .btn-share{
+            width: 150px;
+            height: 50px;
+
+            color: white;
+            border: 2px solid rgb(22, 79, 122);
+            background-color: rgb(22, 79, 122);
+
+            border-radius: 10px;
+
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        @media screen and (max-width: 780px) {
+            body {
+                background-position: 110px -50px;
+                background-size: 500px;;
+            }
+
+            .gom {
+                margin-top: 50px;
+            }
+
+            .msg {
+                font-size: 24px;
+                line-height: 36px;
+                margin-bottom: 36px;
+                padding: 10px;
+            }
+
+        }
+    </style>
+     <script>
+        function back() {
+            let url = window.location.href;
+            let new_url = url.split('m2.html')[0] + 'medicine.html';
+            window.location.href = new_url;
+            alert("뒤로 고고");
+        }
+        function share() {
+            var t = document.createElement("textarea");
+            document.body.appendChild(t);
+            t.value = window.location.href;
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
+            alert('복사 완료!')
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="gom"></div>
+    <h1 class="title">진통제를 먹으면 내성이 생길까?</h1>
+    <p class="msg">
+        내성은 생기지 않는다!<br/>
+        마약류 진통제를 매우 규칙적으로 오랫동안<br/>
+        먹지 않는 한 내성이 생기지 않으니 참고하자!
+    </p>
+    <div class="btns">
+        <button onclick="back();" class="btn-back">뒤로가기</button>
+        <button onclick="share();" class="btn-share">공유하기</button>
+    </div>
+</body>
+
+</html>
